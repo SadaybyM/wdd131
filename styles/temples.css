@@ -9,22 +9,25 @@ body {
 }
 
 header {
-    background-color: #50205b; /* Fondo azul oscuro */
+    background-color: #50205b;
     color: white;
-    text-align: center;
     padding: 1rem;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    text-align: left;
 }
 
-/* Navigation Styles */
+/* Menu Button */
 #menu {
-    display: none;
+    display: block;
     font-size: 2rem;
     color: white;
     position: absolute;
@@ -33,14 +36,15 @@ header h1 {
     cursor: pointer;
 }
 
+/* Navigation Styles */
 .navigation {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: right; /* Centra los elementos horizontalmente */
+    justify-content: flex-end; /* Los elementos a la derecha */
     align-items: center;
-    gap: 2rem; /* Espaciado entre los elementos */
+    gap: 2rem;
 }
 
 .navigation li {
@@ -52,15 +56,21 @@ header h1 {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    background-color: transparent; /* Sin fondo para un diseño limpio */
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    border-bottom: 2px solid transparent; /* Línea inferior */
+    padding: 0.5rem;
+    background-color: transparent; /* Sin fondo por defecto */
+    border-radius: 50%; /* Hace el fondo circular */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navigation a:hover {
-    color: #a56fb3; /* Cambia a verde agua */
-    border-bottom: 2px solid #2ec4b6; /* Línea inferior de color */
+    background-color: #a56fb3; /* Fondo al pasar el ratón */
+    color: white;
+}
+
+.navigation a:focus {
+    background-color: #ffffff; /* Fondo blanco al seleccionar */
+    color: #50205b;
+    border: 2px solid #a56fb3; /* Borde circular */
 }
 
 /* Responsive Navigation */
@@ -71,12 +81,21 @@ header h1 {
 
     .navigation {
         flex-direction: column;
-        align-items: left;
+        align-items: flex-start;
         display: none;
+        background-color: #50205b;
+        width: 100%;
+        padding: 1rem 0;
     }
 
     .navigation.active {
         display: flex;
+    }
+
+    .navigation li {
+        width: 100%;
+        text-align: left;
+        padding: 0.5rem 1rem;
     }
 }
 
@@ -88,30 +107,74 @@ main {
 
 .main {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 figure {
     margin: 0;
     padding: 0;
     text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Necesario para las acciones flotantes */
 }
 
 figure img {
     width: 100%;
-    border-radius: 8px;
+    height: auto;
+    display: block;
 }
 
 figure figcaption {
     margin-top: 0.5rem;
     font-weight: bold;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #50205b;
 }
 
-@media screen and (min-width: 768px) {
-    .main {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+/* Menú de acciones flotantes */
+.image-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.image-actions button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.image-actions button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar acciones al pasar el cursor */
+figure:hover .image-actions {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Footer Styles */
