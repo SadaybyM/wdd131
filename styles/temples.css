@@ -70,10 +70,9 @@ header h1 {
 .navigation a:focus {
     background-color: #ffffff; /* Fondo blanco al seleccionar */
     color: #50205b;
-    border: 2px solid #a56fb3; /* Borde circular */
+    border: 10px solid #a56fb3; /* Borde circular */
 }
 
-/* Responsive Navigation */
 @media screen and (max-width: 768px) {
     #menu {
         display: block;
@@ -99,7 +98,6 @@ header h1 {
     }
 }
 
-/* Main Styles */
 main {
     padding: 1rem;
     text-align: center;
@@ -138,7 +136,6 @@ figure figcaption {
     color: #50205b;
 }
 
-/* Footer Styles */
 footer {
     text-align: center;
     padding: 1rem;
@@ -150,7 +147,6 @@ footer p {
     margin: 0.5rem 0;
 }
 
-/* Contenedor de la imagen */
 .image-container {
     position: relative;
     overflow: hidden;
@@ -163,7 +159,6 @@ footer p {
     border-radius: 8px;
 }
 
-/* Menú de acciones flotantes */
 .image-actions {
     position: absolute;
     top: 10px;
@@ -195,7 +190,6 @@ footer p {
     background-color: #f0f0f0;
 }
 
-/* Mostrar acciones al pasar el cursor */
 .image-container:hover .image-actions {
     opacity: 1;
     visibility: visible;
