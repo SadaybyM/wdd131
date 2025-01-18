@@ -27,7 +27,7 @@ header h1 {
 
 /* Menu Button */
 #menu {
-    display: block;
+    display: bl;
     font-size: 2rem;
     color: white;
     position: absolute;
@@ -122,7 +122,6 @@ figure {
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* Necesario para las acciones flotantes */
 }
 
 figure img {
@@ -137,6 +136,31 @@ figure figcaption {
     padding: 0.5rem;
     font-size: 1rem;
     color: #50205b;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #50205b;
+    color: white;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
 }
 
 /* Menú de acciones flotantes */
@@ -172,19 +196,7 @@ figure figcaption {
 }
 
 /* Mostrar acciones al pasar el cursor */
-figure:hover .image-actions {
+.image-container:hover .image-actions {
     opacity: 1;
     visibility: visible;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #50205b;
-    color: white;
-}
-
-footer p {
-    margin: 0.5rem 0;
 }
