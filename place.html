@@ -6,9 +6,11 @@
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals by Sadayby Herra">
     <meta name="author" content="Sadayby Herra">
     <title>WDD 131: Dynamic Web Fundamentals - Sadayby Herra Dog Lovers</title>
+    
+    
     <link rel="stylesheet" href="styles/place.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,16 +18,17 @@
         <header>
             <h1>Dominican Republic</h1>
         </header>
-        <div class="header-line"></div> 
+        <div class="header-line"></div>
+
         <main>
             <picture>
                 <source srcset="images/pexels-chevanon-1108099.webp" media="(max-width: 767px)">
                 <source srcset="images/pexels-valeriya-1805164.webp" media="(min-width: 768px)">
                 <img src="images/pexels-valeriya-1805164.webp" alt="Dog image" class="hero-image">
             </picture>
-            
+
             <div class="floating-box data">
-                <h2>Data</h2>
+                <h2>Informations</h2>
                 <ul>
                     <li><strong>Area:</strong> 48,442 sq km</li>
                     <li><strong>Population:</strong> 11.33 million (2023 estimate)</li>
@@ -39,7 +42,7 @@
             </div>
 
             <div class="floating-box weather">
-                <h2>Weather ⛅</h2>
+                <h2>Weather</h2>
                 <ul>
                     <li><strong>Temperature:</strong> 29°C</li>
                     <li><strong>Conditions:</strong> Sunny</li>
@@ -52,10 +55,12 @@
         </main>
 
         <footer>
-            <p>&copy; <span id="currentYear"></span> Sadayby Herra, Dominican Republic</p>
+            <p>©<span id="currentYear"></span> Sadayby Herra, Dominican Republic</p>
             <p>Last Modified: <span id="lastModified"></span></p>
         </footer>
     </div>
+
+    
     <script defer src="scripts/place.js"></script>
 </body>
 </html>
