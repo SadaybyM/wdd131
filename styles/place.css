@@ -1,0 +1,115 @@
+/* Variables de colores y diseño */
+:root {
+    --primary-color: #81195e; 
+    --secondary-color: #8a51b3; 
+    --text-color: #1a1a1a;
+    --background-color: #fff4ff;
+    --box-bg-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Reset general */
+body {
+    font-family: 'Roboto', sans-serif; /* Se eliminan fuentes con URLs incorrectas */
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+/* Contenedor */
+.Container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Contenedor principal */
+main {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Imagen principal */
+picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Cuadros de información flotantes */
+.floating-heart {
+    position: absolute;
+    background: var(--box-bg-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    width: 280px;
+}
+
+.data {
+    top: 20px;
+    left: 20px;
+}
+
+.weather {
+    top: 20px;
+    right: 20px;
+}
+
+/* Estilos para los títulos de los cuadros flotantes */
+.floating-heart h2 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin: -15px -15px 10px -15px;
+    font-size: 18px;
+}
+
+/* Estilos de listas */
+.floating-heart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.floating-heart li {
+    text-align: left;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Icono del clima */
+.weather-icon {
+    width: 40px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .floating-heart {
+        position: relative;
+        width: 90%;
+        margin: 10px auto;
+    }
+}
