@@ -9,44 +9,48 @@
     <link rel="stylesheet" href="styles/place.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo%202:ital,wght@0,300..800;1,300..800&family=Bangers&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="Container">
+    <div class="container">
         <header>
             <h1>Dominican Republic</h1>
         </header>
+        <div class="header-line"></div> <!-- Línea de separación en el header -->
         <main>
-            <div class="floating-heart weather">
-                <h2>Weather</h2>
-                <ul>
-                    <li>Temperature: 29°C</li>
-                    <li>Condition: Sunny</li>
-                    <li>Wind: 5 km/h</li>
-                    <li>Humidity: 75%</li>
-                    <li>Rainfall Probability: 40%</li>
-                </ul>
-                <img src="images/1034355_day_night_date_moon_sun_icon.svg" alt="weather icon" class="weather-icon">
-            </div>
-            <div class="floating-heart data">
-                <h2>Information</h2>
-                <ul>
-                    <li>Area: 48,442 sq km</li>
-                    <li>Population: 11.33 million (2023 estimate)</li>
-                    <li>Capital: Santo Domingo</li>
-                    <li>Languages: Spanish or Castilian</li>
-                    <li>Currency: Dominican Peso (DOP)</li>
-                    <li>Time Zone: GMT-4</li>
-                    <li>Calling Code: +1809</li>
-                    <li>Internet TLD: .do</li>
-                </ul>
-            </div>
             <picture>
                 <source srcset="images/pexels-chevanon-1108099.webp" media="(max-width: 767px)">
                 <source srcset="images/pexels-valeriya-1805164.webp" media="(min-width: 768px)">
-                <img src="images/pexels-valeriya-1805164.webp" alt="Dog image">
+                <img src="images/pexels-valeriya-1805164.webp" alt="Dog image" class="hero-image">
             </picture>
+            
+            <div class="floating-box data">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 48,442 sq km</li>
+                    <li><strong>Population:</strong> 11.33 million (2023 estimate)</li>
+                    <li><strong>Capital:</strong> Santo Domingo</li>
+                    <li><strong>Languages:</strong> Spanish or Castilian</li>
+                    <li><strong>Currency:</strong> Dominican Peso (DOP)</li>
+                    <li><strong>Time Zone:</strong> GMT-4</li>
+                    <li><strong>Calling Code:</strong> +1809</li>
+                    <li><strong>Internet TLD:</strong> .do</li>
+                </ul>
+            </div>
+
+            <div class="floating-box weather">
+                <h2>Weather ⛅</h2>
+                <ul>
+                    <li><strong>Temperature:</strong> 29°C</li>
+                    <li><strong>Conditions:</strong> Sunny</li>
+                    <li><strong>Wind:</strong> 5 km/h</li>
+                    <li><strong>Humidity:</strong> 75%</li>
+                    <li><strong>Rainfall Probability:</strong> 40%</li>
+                </ul>
+                <img src="images/1034355_day_night_date_moon_sun_icon.svg" alt="Weather icon" class="weather-icon">
+            </div>
         </main>
+
         <footer>
             <p>&copy; <span id="currentYear"></span> Sadayby Herra, Dominican Republic</p>
             <p>Last Modified: <span id="lastModified"></span></p>

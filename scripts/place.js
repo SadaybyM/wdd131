@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Mostrar el año actual en el footer
+  // Show current year in the footer
   document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-  // Mostrar la última fecha de modificación
+  // Show last modified date
   document.getElementById("lastModified").textContent = document.lastModified;
 
-  // Variables para temperatura y velocidad del viento
-  const temperature = 22; // en grados Celsius
-  const windSpeed = 5; // en km/h
+  // Temperature and wind speed variables
+  const temperature = 22; // Celsius
+  const windSpeed = 5; // km/h
 
   function calculateWindChill(temp, wind) {
       if (temp <= 10 && wind > 4.8) {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return "N/A";
   }
 
-  // Mostrar el factor de sensación térmica
+  // Display wind chill factor
   const windChill = calculateWindChill(temperature, windSpeed);
   document.getElementById("windChill").textContent = `${windChill} °C`;
 });

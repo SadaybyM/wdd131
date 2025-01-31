@@ -1,15 +1,15 @@
 /* Variables de colores y diseño */
 :root {
-    --primary-color: #81195e; 
-    --secondary-color: #8a51b3; 
+    --primary-color: #19a4d7; /* Rojo vibrante */
+    --secondary-color: #26cec8; /* Amarillo brillante */
     --text-color: #1a1a1a;
-    --background-color: #fff4ff;
-    --box-bg-color: rgba(255, 255, 255, 0.9);
+    --background-color: #f8f9fa;
+    --box-bg-color: rgba(255, 255, 255, 0.95);
 }
 
 /* Reset general */
 body {
-    font-family: 'Roboto', sans-serif; /* Se eliminan fuentes con URLs incorrectas */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color: var(--text-color);
@@ -18,7 +18,7 @@ body {
 }
 
 /* Contenedor */
-.Container {
+.container {
     max-width: 100%;
     margin: 0 auto;
 }
@@ -27,72 +27,81 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 20px;
+    padding: 25px;
     font-size: 28px;
     text-align: center;
     font-weight: bold;
 }
 
+/* Línea separadora del header */
+.header-line {
+    height: 10px;
+    background-color: var(--secondary-color);
+}
+
 /* Contenedor principal */
 main {
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
 }
 
 /* Imagen principal */
-picture img {
+.hero-image {
     width: 100%;
-    height: auto;
+    height: 600px;
+    object-fit: cover;
     display: block;
 }
 
-/* Cuadros de información flotantes */
-.floating-heart {
+/* Cuadros flotantes */
+.floating-box {
     position: absolute;
     background: var(--box-bg-color);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
 }
 
+/* Posicionamiento de cuadros */
 .data {
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
 }
 
 .weather {
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
 }
 
-/* Estilos para los títulos de los cuadros flotantes */
-.floating-heart h2 {
+/* Estilos para los títulos de los cuadros */
+.floating-box h2 {
     background-color: var(--secondary-color);
-    color: white;
-    padding: 8px;
-    border-radius: 4px;
-    margin: -15px -15px 10px -15px;
-    font-size: 18px;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: -20px -20px 15px -20px;
+    font-size: 20px;
+    text-align: left;
 }
 
 /* Estilos de listas */
-.floating-heart ul {
+.floating-box ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 
-.floating-heart li {
-    text-align: left;
+.floating-box li {
     font-size: 16px;
     margin: 5px 0;
 }
 
 /* Icono del clima */
 .weather-icon {
-    width: 40px;
+    width: 50px;
     margin-top: 10px;
 }
 
@@ -107,9 +116,13 @@ footer {
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
-    .floating-heart {
+    .floating-box {
         position: relative;
         width: 90%;
         margin: 10px auto;
+    }
+
+    .hero-image {
+        height: 400px;
     }
 }
