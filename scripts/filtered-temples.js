@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createTempleCard(filteredTemples) {
         const container = document.getElementById("temple-cards");
-        container.innerHTML = ""; 
+        container.innerHTML = "";
 
         filteredTemples.forEach(temple => {
             let card = document.createElement("section");
@@ -51,29 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     createTempleCard(temples);
 
-    // Eventos de filtrado
-    document.getElementById("Home").addEventListener("click", () => {
-        document.getElementById("title").textContent = "Home";
-        createTempleCard(temples);
-    });
-
-    document.getElementById("Old").addEventListener("click", () => {
-        document.getElementById("title").textContent = "Old Temples";
-        createTempleCard(temples.filter(t => parseInt(t.dedicated.split(", ")[0]) < 1900));
-    });
-
-    document.getElementById("New").addEventListener("click", () => {
-        document.getElementById("title").textContent = "New Temples";
-        createTempleCard(temples.filter(t => parseInt(t.dedicated.split(", ")[0]) > 2000));
-    });
-
-    document.getElementById("Large").addEventListener("click", () => {
-        document.getElementById("title").textContent = "Large Temples";
-        createTempleCard(temples.filter(t => t.area > 90000));
-    });
-
-    document.getElementById("Small").addEventListener("click", () => {
-        document.getElementById("title").textContent = "Small Temples";
-        createTempleCard(temples.filter(t => t.area < 10000));
-    });
+    document.getElementById("Home").addEventListener("click", () => createTempleCard(temples));
+    document.getElementById("Old").addEventListener("click", () => createTempleCard(temples.filter(t => parseInt(t.dedicated.split(", ")[0]) < 1900)));
+    document.getElementById("New").addEventListener("click", () => createTempleCard(temples.filter(t => parseInt(t.dedicated.split(", ")[0]) > 2000)));
+    document.getElementById("Large").addEventListener("click", () => createTempleCard(temples.filter(t => t.area > 90000)));
+    document.getElementById("Small").addEventListener("click", () => createTempleCard(temples.filter(t => t.area < 10000)));
 });
