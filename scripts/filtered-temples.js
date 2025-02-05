@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("currentYear").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
-    // Lista completa de templos
     const temples = [
         { templeName: "Aba Nigeria", location: "Aba, Nigeria", dedicated: "2005, August, 7", area: 11500, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg" },
         { templeName: "Manti Utah", location: "Manti, Utah, United States", dedicated: "1888, May, 21", area: 74792, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg" },
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     createTempleCard(temples);
 
-    // Filtros para mostrar templos específicos
     document.getElementById("Home").addEventListener("click", () => createTempleCard(temples));
     document.getElementById("Old").addEventListener("click", () => createTempleCard(temples.filter(t => parseInt(t.dedicated.split(", ")[0]) < 1900)));
     document.getElementById("New").addEventListener("click", () => createTempleCard(temples.filter(t => parseInt(t.dedicated.split(", ")[0]) > 2000)));

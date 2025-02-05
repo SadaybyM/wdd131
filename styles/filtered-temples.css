@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background-color: #a450ad; /* Morado claro */
+    background-color: #a450ad; 
     color: white;
     padding: 1.5rem;
     text-align: center;
@@ -47,7 +47,7 @@ header h1 {
 
 .navigation a:hover,
 .navigation a:focus {
-    background-color: #ff99cc; /* Rosado */
+    background-color: #ff99cc; 
     color: white;
 }
 
@@ -77,7 +77,7 @@ section {
 section h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #937f97; /* Morado oscuro */
+    color: #937f97; 
 }
 
 section p {
