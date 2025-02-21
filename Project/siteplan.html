@@ -3,65 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Plan - Free Veterinary Clinic</title>
+    <title>VetCare Free Clinic</title>
     <link rel="stylesheet" href="siteplan.css">
     <script src="siteplan.js" defer></script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Free Veterinary Clinic - Site Plan</h1>
-    </header>
 
+    <header>
+        <h1>VetCare Free Clinic</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="citations.html">Citations</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <main>
         <section>
-            <h2>Site Name</h2>
-            <p><strong>VetCare Free Clinic</strong> - This name reflects the mission of providing free veterinary services in the community.</p>
+            <h2>About Us</h2>
+            <p>Welcome to VetCare Free Clinic! We provide free veterinary services for pets in need.</p>
+            <img src="images/clinic.jpg" alt="VetCare Clinic" loading="lazy">
         </section>
-
+    
         <section>
-            <h2>Site Purpose</h2>
-            <p>This website will serve as an information hub for pet owners, providing details about available veterinary services, pet adoption, and how to support animal welfare initiatives.</p>
-        </section>
-
-        <section>
-            <h2>Scenarios</h2>
-            <ul>
-                <li>Where can I find free veterinary services for my pet?</li>
-                <li>How can I adopt a pet from the clinic?</li>
-                <li>What volunteer opportunities are available at the clinic?</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Color Scheme</h2>
-            <p><span class="color-box primary"></span> <strong>Primary Color:</strong> #4CAF50 (used for headers and navigation)</p>
-            <p><span class="color-box secondary"></span> <strong>Secondary Color:</strong> #F4A261 (used for buttons and highlights)</p>
-        </section>
-
-        <section>
-            <h2>Typography</h2>
-            <p><strong>Headings:</strong> Anton SC</p>
-            <p><strong>Body Text:</strong> Roboto</p>
-        </section>
-
-        <section>
-            <h2>Wireframe</h2>
-            <p>Below are the wireframes for mobile and desktop views:</p>
-            <div class="wireframe-container">
-                <img src="images/mobile-wireframe.png" alt="Mobile Wireframe">
-                <img src="images/desktop-wireframe.png" alt="Desktop Wireframe">
-            </div>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formMessage"></p>
         </section>
     </main>
+    
+<footer>
+    <p>&copy; <span id="currentYear"></span> VetCare Free Clinic | <a href="citations.html">Citations</a></p>
+    <p id="lastModified">Last Modified: </p>
+</footer>
 
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Free Veterinary Clinic - All Rights Reserved.</p>
-        <p id="lastModified">Last Modified: </p>
-    </footer>
 </body>
 </html>
