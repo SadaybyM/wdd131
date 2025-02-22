@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #4cafa3;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -23,9 +23,25 @@ nav ul li {
     margin: 0 15px;
 }
 
+/* Style for the navigation links */
 nav ul li a {
-    color: white;
+    color: rgb(168, 196, 192);
     text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px; /* Makes it circular */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* When hovering over a link */
+nav ul li a:hover {
+    background-color: #a8e6cf; /* Light green */
+    color: #000; /* Black text for contrast */
+}
+
+/* When a link is currently active */
+nav ul li a.active {
+    background-color: #a8e6cf; /* Light green */
+    color: #000; /* Black text for contrast */
 }
 
 main {
@@ -38,13 +54,14 @@ ul {
     list-style: none;
 }
 
+/* Pet images */
 ul li img {
     width: 150px;
     border-radius: 10px;
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #4cafa3;
     color: white;
     padding: 1rem;
     text-align: center;
